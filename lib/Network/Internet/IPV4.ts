@@ -2,7 +2,7 @@ import { Internet } from "./Internet";
 import { InternetDecoder } from "./InternetDecoder";
 
 export class IPV4 implements Internet {
-  private offset: number = 0;
+  public offset: number = 0;
   public version: number = 0;
   public headerLength: number = 0;
   public servicesField: ServicesField = new ServicesField();

@@ -1,7 +1,8 @@
 import { Internet } from "./Internet";
 
 export class IPV6 implements Internet {
-  private offset: number = 0;
+  public offset: number = 0;
+  public protocol: number = -1;
 
   constructor() {}
 

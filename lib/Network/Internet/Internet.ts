@@ -1,5 +1,6 @@
 export interface Internet {
-  // offset: number;
+  offset: number;
+  protocol: number;
 
   parse(buffer: Buffer, offset: number): Internet;
 }
