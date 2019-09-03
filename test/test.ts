@@ -12,10 +12,9 @@ const linkType = c.open(device, filter, bufSize, buffer);
 
 c.setMinBytes && c.setMinBytes(0);
 
-c.on("packet", (nbytes: any, trunc: any) => {
-  buffer = buffer.slice(0, nbytes);
+c.on("packet", (nbytes: any, trunc: boolean) => {
   if (linkType === "ETHERNET") {
-    const t = new Packet(buffer, LinkLayer.Ethernet);
-    console.log("");
+    const t = new Packet(buffer, LinkLayer.Ethernet, nbytes);
+    console.log(t.transport.data.toString());
   }
 });

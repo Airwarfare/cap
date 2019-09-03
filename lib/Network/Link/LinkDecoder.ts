@@ -7,6 +7,7 @@ export class LinkDecoder {
   static offset: number = 0;
 
   static decode(buffer: Buffer, link: number): Link {
+    this.offset = 0;
     return this.linkType(buffer, link);
   }
 
