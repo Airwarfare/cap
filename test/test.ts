@@ -1,9 +1,6 @@
 import { Packet } from "../lib/Network/Packet";
 import { LinkLayer } from "../lib/Network/ProtocolEnums";
-
-const Cap = require("../lib/Cap").Cap;
-const decoders = require("../lib/Decoders");
-const PROTOCOL = decoders.PROTOCOL;
+import { Cap } from "../lib/Cap";
 
 const c = new Cap();
 const device = "\\Device\\NPF_{FBE9EE53-8D53-408C-8EFE-0C31EE7BE9F6}";
